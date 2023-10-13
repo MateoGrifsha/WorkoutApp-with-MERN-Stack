@@ -9,7 +9,7 @@ mongoose.connect(process.env.MONGO_URI)
         
         //listen for requests
         app.listen(process.env.PORT, () =>{
-            console.log('connected to databse & listening on port 4000');
+            console.log('connected to database & listening on port 4000');
         }); //1st param: port number from .env file
     })
         .catch((error)=>{
@@ -28,7 +28,3 @@ app.use((req, res, next)=>{
 
 //routes
 app.use('/api/workouts', workoutRoutes) //when we send req to the url it uses the workoutRoutes
-
-
-
-

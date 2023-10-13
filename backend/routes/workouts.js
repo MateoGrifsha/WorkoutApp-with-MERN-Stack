@@ -15,7 +15,7 @@ router.get('/:id', (req,res) => {;
 
 //POST a new workout
 router.post('/', (req, res) =>{
-    res.json({message: 'POST a new workout'})
+    res.json({message: 'Add a new workout: '})
 })
 
 //DELETE a new workout
