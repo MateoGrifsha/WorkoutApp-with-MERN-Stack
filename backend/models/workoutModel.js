@@ -18,4 +18,4 @@ const workoutSchema = new Schema({
 }, {timestamps: true}); //timestamps: true makes it easy for us to display the time the document was created or updated
 
 module.exports = mongoose.model('workout', workoutSchema);
-workoutSchema.find();
+// workoutSchema.find();
