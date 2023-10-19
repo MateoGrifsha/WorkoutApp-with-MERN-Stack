@@ -66,6 +66,12 @@ header a {
   border-radius: 12px;
   color: #fff;
 }
+.workout-details span:hover{
+  background: rgb(238, 29, 29);
+}
+.workout-details span:active{
+  background: rgb(196, 37, 37);
+}
 
 /* new workout form */
 label, input {
@@ -96,4 +102,7 @@ div.error {
   color: var(--error);
   border-radius: 4px;
   margin: 20px 0;
+}
+input.error{
+  border: thin solid rgb(241, 76, 76);
 }
