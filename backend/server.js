@@ -1,6 +1,11 @@
 require('dotenv').config();
+
+require('nodemon')
+
 const express = require('express'); //requires the package
 const mongoose = require('mongoose'); //requires mongoose
+const workoutRoutes = require('./routes/workouts');
+const userRoutes = require('./routes/users');
 
 //connect to database
 
@@ -17,7 +22,7 @@ mongoose.connect(process.env.MONGO_URI)
     })
 
 const app = express(); //creates express app
-const workoutRoutes = require('./routes/workouts');
+
 
 //middleware
 app.use(express.json())
@@ -28,3 +33,4 @@ app.use((req, res, next)=>{
 
 //routes
 app.use('/api/workouts', workoutRoutes) //when we send req to the url it uses the workoutRoutes
+app.use('/api/user', userRoutes) //when we send req to the url it uses the workoutRoutes
