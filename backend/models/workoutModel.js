@@ -14,6 +14,10 @@ const workoutSchema = new Schema({
     load: {
         type: Number,
         required: true,
+    },
+    user_id: {
+        type: String,
+        required: true
     }
 }, {timestamps: true}); //timestamps: true makes it easy for us to display the time the document was created or updated
 

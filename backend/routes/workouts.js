@@ -10,6 +10,10 @@ const {
 
 } = require('../controllers/workoutController');
 
+//require auth for all workout routes
+const requireAuth = require('../middleware/requireAuth')
+router.use(requireAuth)
+
 //Gets all workouts
 router.get('/', getAllWorkouts);
 

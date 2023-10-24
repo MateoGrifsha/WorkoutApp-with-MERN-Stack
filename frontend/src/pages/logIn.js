@@ -27,7 +27,7 @@ return (
             onChange={(e) => setPassword(e.target.value)}
             value = {password}
         />
-        <button disabled='isLoading'>Log In</button>
+        <button disabled={isLoading}>Log In</button>
         {error && <div className="error">{error}</div>}
     </form>
 )
